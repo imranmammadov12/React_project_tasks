@@ -12,58 +12,18 @@ const Task = () => {
   return (
     <div id="contact">
       <div>
-        {/* <img
-          key={contact.avatar}
-          src={contact.avatar || null}
-        /> */}
-      </div>
-
-      <div>
         <h1>Task Name: <span> </span>
           {task.first || task.last ? (
             <>
               {task.first} {task.last}
             </>
           ) : (
-            <i>No Name</i>
+            <i>No Task</i>
           )}{" "}
-          <Favorite task={task} />
         </h1>
-
-        {task.twitter && (
-          <p>
-            <a
-              target="_blank"
-              href={`https://twitter.com/${task.twitter}`}
-            >
-              {task.twitter}
-            </a>
-          </p>
-        )}
         <br />
         <h1>Details &#8595;</h1> <span> </span>
         {task.notes && <p>{task.notes}</p>}
-
-        {/* <div>
-          <Form action="edit">
-            <button type="submit">Edit</button>
-          </Form>
-          <Form
-            method="post"
-            action="destroy"
-            onSubmit={(event) => {
-              if (
-                !window.confirm(
-                  "Please confirm you want to delete this record."
-                )
-              ) {
-                event.preventDefault();
-              }
-            }}
-          >
-            <button type="submit">Delete</button>
-          </Form>
-        </div> */}
       </div>
     </div>
   );
@@ -71,26 +31,6 @@ const Task = () => {
 
 
 export default Task;
-
-function Favorite({ task }) {
-  // yes, this is a `let` for later
-  let favorite = task.favorite;
-  return (
-    <Form method="post">
-      <button
-        name="favorite"
-        value={favorite ? "false" : "true"}
-        aria-label={
-          favorite
-            ? "Remove from favorites"
-            : "Add to favorites"
-        }
-      >
-        {/* {favorite ? "★" : "☆"} */}
-      </button>
-    </Form>
-  );
-}
 
 
 
