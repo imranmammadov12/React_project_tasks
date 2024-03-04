@@ -43,15 +43,10 @@ if (rootContainer === null) throw new Error("Can't find root container");
 const router = createBrowserRouter([
   {
     path: '/',
-    // element: <AddTaskButton />,
     element: <Root />,
     loader: rootLoader,
     action: rootAction,
     children: [
-      // {
-      //   path: '/new',
-      //   element: <TaskList />,
-      // },
       {
         path: "tasks/:taskId",
         element: <Task />,
@@ -69,10 +64,6 @@ const router = createBrowserRouter([
       },
     ]
   },
-  // {
-  //   path: '/new',
-  //   element: <TaskList />,
-  // },
   ]);
 
 
