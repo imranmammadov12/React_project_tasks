@@ -56,7 +56,7 @@ const Root = () => {
   return (
     <>
       <div id="sidebar">
-        <h1>React Router Tasks</h1>
+        <h1><img src="https://www.svgrepo.com/show/11307/task-list.svg" alt="" width={'30px'} height={'20px'} />React Router Tasks</h1>
         <div>
           <Form id="search-form" role="search">
             <input
@@ -94,7 +94,7 @@ const Root = () => {
         {filteredTasks.length ? (
           <ul>
             {filteredTasks.map((task) => (
-              <li key={task.id}>
+               <li key={task.id}>
                 <br />
                 <NavLink
                   to={`tasks/${task.id}`}
@@ -158,7 +158,7 @@ const Root = () => {
           </ul>
         ) : (
           <p>
-            <i>No tasks</i>
+            <i><img src="https://www.svgrepo.com/show/11307/task-list.svg" alt="" width={'30px'} height={'20px'} />No tasks</i>
           </p>
         )}
         </nav>
