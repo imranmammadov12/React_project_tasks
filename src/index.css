@@ -439,3 +439,12 @@ i {
   margin-left: 20px;
   color: #3992ff;
 }
+
+.task-notes{
+  border: 3px solid gray;
+  background-color: #3992ff;
+  border-radius: 20px;
+  width: 500px;
+  word-wrap: break-word;
+  padding: 20px;
+}

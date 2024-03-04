@@ -23,7 +23,7 @@ const Task = () => {
         </h1>
         <br />
         <h1>Details &#8595;</h1> <span> </span>
-        {task.notes && <p>{task.notes}</p>}
+        {task.notes && <p className="task-notes">{task.notes}</p>}
       </div>
     </div>
   );
