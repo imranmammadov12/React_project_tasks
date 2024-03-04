@@ -95,6 +95,7 @@ const Root = () => {
           <ul>
             {filteredTasks.map((task) => (
               <li key={task.id}>
+                <br />
                 <NavLink
                   to={`tasks/${task.id}`}
                   className={({ isActive, isPending }) =>
@@ -110,7 +111,7 @@ const Root = () => {
                       {task.first} {task.last}
                     </>
                   ) : (
-                    <i>No Name</i>
+                    <i>No Task</i>
                   )}{" "}
                   {task.favorite && <span>★</span>}
                 </NavLink>
